@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Notes for Unit 1</title>
+  <link rel="stylesheet" href="css.css">
+  <!-- I decided I would try to use styles from a .css file, and a <style> element, just to practice in inheritance... then I realized I couldn't get it to work <em> at all</em> :( IT DOES NOTHING!!! - does it just not work on divs? -->
+</head>
+<body>
+  <nav role = "navigation" class="TOC">
+    <h1>Main Topics</h1>
+    <ul>
+      <li><a href="#1">Understanding Structured Documents</a></li> <!-- I would give these ids (1, 2, 3) descriptive names if I know how to update them automatically as I changed the text of the heading along with the referenced heading -->
+      <li><a href="#2">The Importance of Avoiding Repetition</a></li>
+      <li><a href="#3">Basic HTML and CSS Knowledge</a></li>
+    </ul>
+  </nav>
+  <div class="info">
+    <div class="content" id="1">
+      <div class="body">
+        <h2>An HTML Document is Just a Bunch of Text</h2>
+        <p>Since an HTML document essentially consists of just a bunch of text, it is at the mercy of the interpreter.<br><br>Accordingly, some funky simplifying rules have been developed, which help create a semi-reliable way of rendering HTML into graphics accross platforms - it's not perfect, but still a really amazing level of coordination if you compare it to pretty much anything other human endeavour. Some of these rules are:</p>
+          <ul>
+           <li>Everything is a box</li>
+           <li>Elements nest within one-another, with the most local rules supercedeing the more global</li>
+           <li>Each element may have one or more specified styles</li>
+         </ul>          
+      </div>
+      <div class = "body" id="2">
+        <h2>The Importance of Avoiding Repetition</h2>
+          <p>"I'm so DRY right now." I had a friend that used to say that all the time... I had no idea that she was a programmer. *rimshot*<br>... but seriously, that's a thing, from the east coast in Canada, and it totally doesn't mean what you think... or maybe it does.</p>
+          <p>I don't like the complexity, or the redundancy that comes with repeating myself -- how I am I supposed to create really cool things if I have to be redundant?<br><br>I would much rather think in rules, boxes, abstractions, than spend my time re-doing something that a <a href="http://demotivators.despair.com/demotivational/motivationdemotivator.jpg" target="_blank">robot could have done.</a></p>
+          <p>Don't repeat yourself isn't a programming principle, it's a way of life. In a <em>structured</em> program (i.e. one which works in a heirarchical manner using flow control, appropriate abstraction, and blocks, as opposed to using various goto statements, etc.) which avoids repetition, adn is much easier to read. In turn, it becomes more practical to:</p>
+            <ul>
+              <li>maintain and alter the code -- if you have to change the way something functions, either because it breaks or it needs to work a different way, and it's abstracted, you only have to change the one function instead of changing each separate execution within the code.</li>
+              <li>maintain uniformity -- for example, to change the heading colors in this document, I would only have to update the h2 section in my CSS file, as opposed to changing every STYLE parameter in every heading. This also makes it easier to add new headings and maintain the visual uniformity of the page.</li>
+            </ul>
+      </div>
+      <div class = "body" id="3">
+        <h2>Basic HTML and CSS Knowledge</h2>
+          <p>Things I know and find useful include:
+            <ul>
+             <li>Inheritance:<ul>
+               <li>More specific (lower-level) items supercede higher-order items, just like classes and subclasses. This means <em>in-line</em> > block styles. For the record, I don't think it's a coincidence that CSS uses curly-braces.</li>
+               <li>Everything is easier the more centralized it is -- defaulting to higher-order styling looks better because it's more consistent and is easier to manage. If we consider that things that look familiar tend to look better, does that create a self-fulfilling prophecy? I say yes.</li>
+                <li>You can also earn money using this kind of inheritance.</li>
+                <li>It is so interesting that comments within the STYLE tags require CSS-style commenting</li>
+              </ul>
+            <li>Tools:<ul>
+              <li>I started this particular project on Codepen. That was a pain, SublimeText is just way easier to work with.</li>
+              <li>The Mozilla reference is ridiculous and hard to use, I much prefer to Google "#{query} w3school".</li>
+            </ul>
+            <li>Misc:<ul>
+              <li>"stylesheet" is an <em>attribute</em> of the rel <em>property</em> in the "link" <em>tag</em>... I'm not sure I have all that terminology right.</li>
+            </ul></li>
+            </ul>
+        <p>Things I would like to learn / figure out:</p>
+          <ul>
+            <li>What the best way to make nested lists is?</li>
+            <li><del>How to make those cool "jump to heading" links like the demo site had</del></li>
+            <li>If there is a way to write a tag in a comment and have it display?</li>
+            <li>If there is a way to link text to replicate it - eg. with the table of context that links to areas in the article, can you write the text once and have it auto-update... how?</li>
+          </ul>
+      </div>
+    </div>
+    <div class="photo">
+      <div>
+        <img src="http://a1.s6img.com/cdn/0011/p/3406825_13889437-prn01_lz.jpg" alt="Unstoppable T-Rex Image">
+      </div>
+    </div>
+  </div>
+  <footer class = "footer" style="background:black; color:white">
+      <p>
+        THIS IS A FOOTER -- YAY SEMANTIC ELEMENTS<br>
+        I do feel like putting the footer in a |p| might be a bit superfluous for these particular purposes...
+      </p>
+  </footer>
+  <div class ="WHAAAT?" style = "text-align: center">
+    <span class = "footer" style = "background:lightgreen">
+          THIS IS A SPAN, BUT ALSO A FOOTER, BUT IT'S IN A DIV... whaaaa??
+    </span>
+  </div>
+</body>
